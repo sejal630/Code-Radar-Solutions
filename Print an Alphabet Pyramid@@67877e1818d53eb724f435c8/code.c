@@ -7,7 +7,7 @@ int main(){
             printf(" ");
         }
         for(char ch='A';ch<'A'+i;ch++){
-            printf("%c ",ch);
+            printf(" %c ",ch);
         }
         printf("\n");
     }
