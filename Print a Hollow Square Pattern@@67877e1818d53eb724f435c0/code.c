@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main(){
-    int row,col;
-    scanf("%d",&row);
-    scanf("%d",&col);
-    for(int i=1;i<=row;i++){
-        for(int j=1;j<=col;j++){
-            if(i==1||i==row||j==1||j==col){
+    int size;
+    scanf("%d",&size);
+    scanf("%d",&size);
+    for(int i=1;i<=size;i++){
+        for(int j=1;j<=size;j++){
+            if(i==1||i==size||j==1||j==size){
                 printf("* ");
             }
             else{
-                printf("");
+                printf(" ");
             }
         }
         printf("\n");
