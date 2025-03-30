@@ -1,5 +1,6 @@
 #include <stdio.h>
-int main(){int n,i, j;
+int main(){
+    int n, i, j;
     char ch;
     for (i = n; i > 0; i--) {
         ch = 'A';
