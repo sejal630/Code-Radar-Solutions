@@ -13,7 +13,7 @@ int main() {
     scanf("%d", &n);
 
     int nthBit = getNthBit(number, n);
-    printf("%d\n", n, number, nthBit);
+    printf("%d\n",nthBit);
 
     return 0;
 }
