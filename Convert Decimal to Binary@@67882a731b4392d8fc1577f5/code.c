@@ -18,4 +18,6 @@ int main() {
         printf("0");
     }
 
-    printf("\n
+    printf("\n");
+    return 0;
+}
