@@ -8,10 +8,8 @@ int clearNthBit(int number, int n) {
 int main() {
     int number, n;
 
-    printf("");
     scanf("%d", &number);
 
-    printf("");
     scanf("%d", &n);
 
     int result = clearNthBit(number, n);
