@@ -1,19 +1,11 @@
 #include <stdio.h>
 
-int clearNthBit(int number, int n) {
-    int mask = ~(1 << (n - 1));
-    return number & mask;
-}
-
 int main() {
-    int number, n;
+    int num, pos;
+    scanf("%d %d", &num, &pos);
 
-    scanf("%d", &number);
-
-    scanf("%d", &n);
-
-    int result = clearNthBit(number, n);
-    printf("%d\n", n, result);
+    int result = num & ~(1 << pos);
+    printf("%d\n", result);
 
     return 0;
 }
