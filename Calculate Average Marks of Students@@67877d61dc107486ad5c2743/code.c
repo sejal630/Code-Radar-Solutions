@@ -6,7 +6,7 @@
     float marks;
 };
 int main(){
-    int nN
+    int N
     scanf("%d",&N);
     struct student students[N];
     float total=0;
