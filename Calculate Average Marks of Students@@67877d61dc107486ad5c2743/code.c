@@ -6,7 +6,7 @@
     float marks;
 };
 int main(){
-    int N;
+    int nN
     scanf("%d",&N);
     struct student students[N];
     float total=0;
@@ -14,7 +14,7 @@ int main(){
         scanf("%d %s %f",&students[i].rollnumber,students[i].name,&students[i].marks);
         total+=students[i].marks;
     }
-    float average=total/n;
+    float average=total/N;
     printf("Average Marks: %.2f\n",average);
     return 0;
 }
