@@ -9,12 +9,11 @@ int main(){
     int N;
     scanf("%d",&N);
     struct student students[N];
-    float total=0;
     for(int i=0;i<N;i++){
         scanf("%d %s %f",&students[i].rollnumber,students[i].name,&students[i].marks);
-        total+=students[i].marks;
     }
-    float average=total/N;
-    printf("Average Marks: %.2f\n",average);
+    for(int i=0;i<N;i++){
+        printf("Roll Number: %d, Name: %s, Marks: %.2f\n",students[i].rollnumber,students[i].name,students[i].marks);
+    }
     return 0;
 }
