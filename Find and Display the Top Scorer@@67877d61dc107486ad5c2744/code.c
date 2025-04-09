@@ -8,7 +8,7 @@
 int main(){
     int N;
     scanf("%d",&N);
-    struct student studnts[N],topscorer;
+    struct student students[N],topscorer;
     for(int i=0;i<N;i++){
         scanf("%d %s %f",&students[i].rollnumber,&students[i].name,&students[i].marks);
         if(i==0 || students[i].marks>topscorer.marks){
