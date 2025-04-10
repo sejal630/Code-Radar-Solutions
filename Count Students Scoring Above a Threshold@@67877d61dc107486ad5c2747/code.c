@@ -18,6 +18,6 @@ int main(){
             count++;
         }
     }
-    printf("count of students scoring above %.2f:%d\n",threshold,count);
+    printf("count of students scoring above %.2f: %d\n",threshold,count);
     return 0;
 }
