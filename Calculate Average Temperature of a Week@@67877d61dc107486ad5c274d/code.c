@@ -11,6 +11,6 @@ int main(){
         sum+=d1[i].temperature;
     }
     float average=sum/7;
-    printf("%.2f\n",average);
+    printf(" Average Temperature: %.2f\n",average);
     return 0;
 }
