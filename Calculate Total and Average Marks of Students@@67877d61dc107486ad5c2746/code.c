@@ -23,7 +23,7 @@ int main() {
 
     average = total / N;
 
-    printf("\nTotal Marks: %.2f\n", total);
+    printf("Total Marks: %.2f\n", total);
     printf("Average Marks: %.2f\n", average);
 
     return 0;
