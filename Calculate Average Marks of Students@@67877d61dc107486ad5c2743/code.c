@@ -1,19 +1,19 @@
 #include <stdio.h>
-#include <string.h>
-    struct student{
-    int rollnumber;
-    char name[100];
+struct student{
+    int roll;
+    char name[50];
     float marks;
 };
 int main(){
-    int N;
-    scanf("%d",&N);
-    struct student students[N];
-    for(int i=0;i<N;i++){
-        scanf("%d %s %f",&students[i].rollnumber,students[i].name,&students[i].marks);
+    int n;
+    scanf("%d",&n);
+    struct student students[n];
+    float totalmarks = 0.0;
+    for(int i=0;i<n;i++){
+        scanf("%d %s %f",&students[i].roll,&students[i].name,&students[i].marks);
+        totalmarks+=students[i].marks;
     }
-    for(int i=0;i<N;i++){
-        printf("Roll Number: %d, Name: %s, Marks: %.2f\n",students[i].rollnumber,students[i].name,students[i].marks);
-    }
+    float average = totalmarks/n;
+    printf("Average Marks: %.2f\n",average);
     return 0;
 }
