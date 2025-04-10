@@ -18,11 +18,11 @@ int main(){
     scanf("%d",&n);
     struct student s1[n];
     for(int i=0;i<n;i++){
-        scanf("%d %s %f",&s1[i].roll,&s1[i].name,&s1[i].marks);
+        scanf("%d %s %f",&s1[i].roll,s1[i].name,&s1[i].marks);
     }
     for(int i=0;i<n;i++){
         char grade=getGrade(s1[i].marks);
-        printf("Roll Number: %d, Name: %s, Grade: %c",s1[i].roll,s1[i].name,s1[i].marks);
+        printf("Roll Number: %d, Name: %s, Grade: %c\n",s1[i].roll,s1[i].name,s1[i].marks);
     }
     return 0;
 }
