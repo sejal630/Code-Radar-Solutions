@@ -9,7 +9,7 @@ int main(){
     scanf("%d",&n);
     struct student students[n];
     for(i=0;i<n;i++){
-        scanf("%d %s %f", &students[i].roll, &students[i].name, &studenst[i].marks);
+        scanf("%d %s %f", &students[i].roll, &students[i].name, &students[i].marks);
         if(students[i].marks<=50){
         allPassed=0;
         }
