@@ -18,7 +18,7 @@ int main(){
         printf("All Passed\n");
     }
     else{
-        printf("Not All Passes\n");
+        printf("Not All Passed\n");
     }
     return 0;
 }
