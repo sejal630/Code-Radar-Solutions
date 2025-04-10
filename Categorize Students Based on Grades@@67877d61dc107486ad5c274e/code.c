@@ -1,28 +1,36 @@
 #include <stdio.h>
-struct student{
-    int roll;
+
+struct Student {
+    int rollNumber;
     char name[50];
     float marks;
 };
-char getGrade(float marks){
-    if(marks>=85.0){
+
+char getGrade(float marks) {
+    if (marks >= 85.0) {
         return 'A';
-    } else if(marks>=70.0){
+    } else if (marks >= 70.0) {
         return 'B';
-    } else{
+    } else {
         return 'C';
     }
 }
-int main(){
-    int n;
-    scanf("%d",&n);
-    struct student s1[n];
-    for(int i=0;i<n;i++){
-        scanf("%d %s %f",&s1[i].roll,s1[i].name,&s1[i].marks);
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    struct Student students[N];
+
+    for (int i = 0; i < N; i++) {
+        scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
     }
-    for(int i=0;i<n;i++){
-        char grade=getGrade(s1[i].marks);
-        printf("Roll Number: %d, Name: %s, Grade: %c\n",s1[i].roll,s1[i].name,s1[i].grade);
+
+    for (int i = 0; i < N; i++) {
+        char grade = getGrade(students[i].marks);
+        printf("Roll Number: %d, Name: %s, Grade: %c\n",
+               students[i].rollNumber, students[i].name, grade);
     }
+
     return 0;
 }
