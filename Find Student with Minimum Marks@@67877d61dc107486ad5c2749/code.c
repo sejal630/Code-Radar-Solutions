@@ -11,7 +11,7 @@ int main(){
     for(i=0;i<n;i++){
         scanf("%d %s %f",&students[i].roll,&students[i].name,&students[i].marks);
     }
-    float minmarks=students[i].marks;
+    float minmarks=students[0].marks;
     for(i=1;i<n;i++){
         if(students[i].marks<minmarks){
             minmarks=students[i].marks;
