@@ -10,7 +10,7 @@ int main() {
     int N, i;
     float total = 0, average;
 
-    printf("Enter number of students: ");
+    printf("");
     scanf("%d", &N);
 
     struct Student students[N];
