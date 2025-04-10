@@ -3,6 +3,7 @@ struct student{
     int roll;
     char name[50];
     float marks;
+    char grade;
 };
 char getGrade(float marks){
     if(marks>=85.0){
