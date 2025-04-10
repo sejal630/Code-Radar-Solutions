@@ -22,7 +22,7 @@ int main(){
     }
     for(int i=0;i<n;i++){
         char grade=getGrade(s1[i].marks);
-        printf("Roll Number: %d, Name: %s, Grade: %c\n",s1[i].roll,s1[i].name,s1[i].marks);
+        printf("Roll Number: %d, Name: %s, Grade: %c\n",s1[i].roll,s1[i].name,s1[i].grade);
     }
     return 0;
 }
