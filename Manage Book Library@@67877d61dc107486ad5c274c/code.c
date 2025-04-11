@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 struct book{
     char title[100];
     char author[100];
