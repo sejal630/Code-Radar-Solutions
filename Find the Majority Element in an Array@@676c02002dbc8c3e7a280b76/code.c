@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    int n, i, target;
+    int n, i, j;
 
     // Read the size of the array
     scanf("%d", &n);
@@ -19,20 +19,28 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    // Read the target element to find
-    scanf("%d", &target);
+    int majorityElement = -1;
+    int majorityCount = 0;
+    int threshold = n / 2;
 
-    int firstIndex = -1; // Initialize to -1 (not found)
-
-    // Iterate through the array to find the first occurrence of the target
+    // Iterate through each element to check if it's the majority element
     for (i = 0; i < n; i++) {
-        if (arr[i] == target) {
-            firstIndex = i;
-            break; // Exit the loop as soon as the first occurrence is found
+        int currentCount = 0;
+        for (j = 0; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                currentCount++;
+            }
+        }
+
+        // If the current element's count is greater than the threshold,
+        // it's the majority element. We can stop here as we only need to find one.
+        if (currentCount > threshold) {
+            majorityElement = arr[i];
+            break;
         }
     }
 
-    printf("%d\n", firstIndex);
+    printf("%d\n", majorityElement);
 
     // Free the allocated memory
     free(arr);
