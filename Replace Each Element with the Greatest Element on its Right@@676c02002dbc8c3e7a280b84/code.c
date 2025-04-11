@@ -26,30 +26,37 @@ int main() {
         }
     }
 
-    int maxCount = 0;
-    int mostFrequent = -1; // Initialize with a value that won't be in the array
-
-    // Iterate through the array to count frequencies
-    for (int i = 0; i < n; i++) {
-        int currentCount = 0;
-        for (int j = 0; j < n; j++) {
-            if (arr[i] == arr[j]) {
-                currentCount++;
-            }
+    // Handle the case of an empty or single-element array
+    if (n <= 1) {
+        if (n == 1) {
+            printf("-1\n");
         }
+        free(arr);
+        return 0;
+    }
 
-        // Update mostFrequent if the current element's frequency is higher
-        // or if the frequency is the same but the current element is smaller
-        if (currentCount > maxCount) {
-            maxCount = currentCount;
-            mostFrequent = arr[i];
-        } else if (currentCount == maxCount && arr[i] < mostFrequent) {
-            mostFrequent = arr[i];
+    // Iterate from right to left to find the greatest element to the right
+    int greatestRight = arr[n - 1];
+    arr[n - 1] = -1; // Replace the last element with -1
+
+    for (int i = n - 2; i >= 0; i--) {
+        int currentElement = arr[i];
+        arr[i] = greatestRight;
+        if (currentElement > greatestRight) {
+            greatestRight = currentElement;
         }
     }
 
-    printf("%d\n", mostFrequent);
+    // Output the modified array
+    for (int i = 0; i < n; i++) {
+        printf("%d", arr[i]);
+        if (i < n - 1) {
+            printf(" ");
+        }
+    }
+    printf("\n");
 
+    // Free the allocated memory
     free(arr);
     return 0;
 }
