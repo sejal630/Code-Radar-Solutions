@@ -21,6 +21,7 @@ int main() {
 
     float threshold;
     scanf("%f", &threshold);
+    printf("Books above price %.2f:\n",threshold);
 
     for (int i = 0; i < N; i++) {
         if (books[i].price > threshold) {
